@@ -25,7 +25,7 @@ SECRET_KEY = 'brg8u616qrij8kpp0aha9m3naa53iw0fpf*(2#e0m)3tk&w52$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['titanic-dashboard.herokuapp.com']
 
 
 # Application definition
