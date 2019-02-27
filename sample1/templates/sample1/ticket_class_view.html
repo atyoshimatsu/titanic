@@ -1,0 +1,22 @@
+{% extends 'sample1/base.html' %}
+
+{% block dashboard %}
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <h3>Data of Titanic</h3><br>
+    <form method="post" action="{% url 'sample1:ticket_class' %}">
+        {% csrf_token %}
+        <h6>{{form}} <input type="submit" value="narrow"></h6>
+    </form>
+  <!-- Highcharts -->
+  <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <div class="container">
+       <div class="row">
+           <div class="col-lg-12" id="ticket_class">
+              <script>
+                Highcharts.chart('ticket_class', {{ ticket_class_chart|safe }});
+              </script>
+           </div>
+       </div>
+    </div>
+</main>
+{% endblock %}
