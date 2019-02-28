@@ -77,7 +77,7 @@ def age(request):
     }
 
     chart = {
-        'chart': {'type': 'line'},
+        'chart': {'type': 'line', 'zoomType':'x'},
         'title': {'text': 'Titanic Survivors by Age'},
         'xAxis': {'categories': categories},
         'yAxis': {'title':False},
