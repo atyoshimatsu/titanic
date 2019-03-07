@@ -1,2 +1,2 @@
 # titanic
-sample dashboard of titanic dataset for django study.
+django study and sample dashboard of titanic dataset for heroku.
