@@ -126,11 +126,13 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
 
 if not DEBUG:
+    # Configure Django App for Heroku.
     import django_heroku
     django_heroku.settings(locals())
+else:
+    try:
+        from .local_settings import *
+    except ImportError:
+        pass
